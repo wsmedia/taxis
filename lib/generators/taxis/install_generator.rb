@@ -39,11 +39,11 @@ TXT
     end
     
     def copy_taxonomy_js
-      copy_file 'taxonomy.js', 'public/javascripts/taxonomy.js'
+      copy_file 'taxonomy.js', 'app/assets/javascripts/taxonomy.js'
     end
 
     def copy_js_tree
-      dest_root = "public/javascripts/jsTree/"
+      dest_root = "vendor/assets/javascripts/jsTree/"
       files = [ 
         'jquery.jstree.js',
         'themes/apple/bg.jpg',
@@ -57,7 +57,7 @@ TXT
         copy_file 'jsTree/' + file, dest_root + file
       end
 
-      copy_file 'images/spinner.gif', 'public/images/spinner.gif'
+      copy_file 'images/spinner.gif', 'vendor/assets/images/spinner.gif'
 
 
     end
