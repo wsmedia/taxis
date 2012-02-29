@@ -73,6 +73,18 @@ module Taxis
       return manage_by_param(:detach, class_name, row_id)
     end
 
+    def tree_children
+      children = []
+      self.children.each do |taxon|
+        children << {
+          :attr => {:id => taxon.id.to_s},
+          :data => taxon.name,
+          :state => taxon.children.empty? ? "" : "closed"
+        }
+      end
+      
+      return children
+    end
 
     def method_missing(obj, *args)
       if obj.match(/attached_(.*)/)
