@@ -42,26 +42,6 @@ TXT
       copy_file 'taxonomy.js', 'app/assets/javascripts/taxonomy.js'
     end
 
-    def copy_js_tree
-      dest_root = "vendor/assets/javascripts/jsTree/"
-      files = [ 
-        'jquery.jstree.js',
-        'themes/apple/bg.jpg',
-        'themes/apple/d.png',
-        'themes/apple/dot_for_ie.gif',
-        'themes/apple/style.css',
-        'themes/apple/throbber.gif',
-      ]
-
-      files.each do |file|
-        copy_file 'jsTree/' + file, dest_root + file
-      end
-
-      copy_file 'images/spinner.gif', 'vendor/assets/images/spinner.gif'
-
-
-    end
-
     def run_migration_install
       generate "taxis:migration"
     end
