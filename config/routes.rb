@@ -4,6 +4,12 @@ Rails.application.routes.draw do
     resources :taxons do
       get :children, :on => :member
     end
+    
+    resources :taxonomies do
+      resources :taxons
+    end
+    
+    
   end
 
 
