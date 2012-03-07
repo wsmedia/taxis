@@ -29,7 +29,7 @@ class Admin::TaxonsController < Admin::BaseController
   def create
     @taxon = Taxon.new(params[:taxon])
     if @taxon.save
-      redirect_to edit_admin_taxonomy_url(@taxon.taxonomy), :notice => "Successfully created taxon."
+      render :text => @taxon.id
     else
       render :action => 'new'
     end
