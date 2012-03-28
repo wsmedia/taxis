@@ -1,6 +1,7 @@
 class CreateTaxons < ActiveRecord::Migration
   def self.up
     create_table :taxons do |t|
+      t.string :category
       t.string :name
       t.text :path
       t.string :url

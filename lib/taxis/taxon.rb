@@ -77,7 +77,10 @@ module Taxis
       children = []
       self.children.each do |taxon|
         children << {
-          :attr => {:id => taxon.id.to_s},
+          :attr => {
+            :id => taxon.id.to_s,
+            :rel => taxon.category
+          },
           :data => taxon.name,
           :state => taxon.children.empty? ? "" : "closed"
         }
