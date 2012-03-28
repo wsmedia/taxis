@@ -1,5 +1,5 @@
 class CreateTaxons < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :taxons do |t|
       t.string :category
       t.string :name
@@ -19,9 +19,5 @@ class CreateTaxons < ActiveRecord::Migration
     add_index :taxons, :lft
     add_index :taxons, :rgt
     add_index :taxons, :root_id
-  end
-
-  def self.down
-    drop_table :taxons
   end
 end
