@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency('nested_set', '~> 1.6.4')
   s.add_dependency('stringex', '~> 1.2.1')
-  s.add_dependency('jquery-rails', '~> 1.0.19')
+  s.add_dependency('jquery-rails', '>= 2.0.2')
 
 end
