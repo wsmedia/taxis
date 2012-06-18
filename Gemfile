@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 gemspec
 
-gem "rails", "~> 3.0.6"
+gem "rails", "~> 3.2.3"
 gem "awesome_print"
 
 gem "rspec-rails"
@@ -13,6 +13,5 @@ if RUBY_PLATFORM =~ /darwin/
   gem "growl"
 end
 
-gem "sqlite3"
-gem "jquery-rails", ">= 0.2.6"
+gem "jquery-rails", ">= 2.0.2"
 
